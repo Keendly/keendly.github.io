@@ -16,7 +16,7 @@ Keendly ran on AWS heavily utilizing services it provides:
 
 ### Few numbers about Keendly
 
-## 2015 - registered users
-## 1181 - users that used Keendly at least once
-## 57932 - ebooks delivered
-## 9665 - unique feeds delivered
+#### 2015 - registered users
+#### 1181 - users that used Keendly at least once
+#### 57932 - ebooks delivered
+#### 9665 - unique feeds delivered
