@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/Keendly/keendly.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+> #WARNING# This is a technical overview of Keendly, a service that lets you deliver articles from RSS aggregators to a Kindle device. The service was shut down on the 2nd of July 2018 and is no longer working.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Architecture
+Keendly ran on AWS heavily utilizing services it provides. Main services used were:
+* **Lambda** - heavily used across system, both for the API and almost all steps of the delivery pipeline
+* **Step Functions** - for the [delivery pipeline](https://github.com/Keendly/delivery-state-machine)
+* **S3** - serving [Keendly App](https://github.com/Keendly/keendly-app), [Blog](https://github.com/Keendly/blog.keendly) and [main site](https://github.com/Keendly/keendly.com), intermediate storage for delivery
+* **API Gateway** - exposing [Keendly API](https://github.com/Keendly/keendly-api) to the world
+* **Cloudwatch** - events for scheduled deliveries + alarms, dashboards and logs
+* **RDS** - just a database
+* **ECS** - to run whatever couldn't run in Lambda
+* **Cloudfront** - CDN
 
-### Markdown
+![Diagram](https://octodex.github.com/images/yaktocat.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Some numbers about Keendly
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Keendly/keendly.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### 2015 - registered users
+### 1181 - users that used Keendly at least once
+### 57932 - ebooks delivered
+### 9665 - unique feeds delivered
