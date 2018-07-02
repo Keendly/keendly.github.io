@@ -12,7 +12,7 @@ Keendly ran on AWS heavily utilizing services it provides. Main services used we
 * **ECS** - to run whatever couldn't run in Lambda
 * **Cloudfront** - CDN
 
-![Diagram](https://octodex.github.com/images/yaktocat.png)
+![Diagram](diagram.png)
 
 ### Some numbers about Keendly
 
